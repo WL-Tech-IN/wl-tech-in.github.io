@@ -1,22 +1,22 @@
 /**
  * Chukta Application JavaScript
- * Handles FAQ accordion, mobile navigation, and waitlist submission.
+ * Theme: Warm Editorial / Terracotta
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Nav Toggle
-  const mobileToggle = document.getElementById('chuktaMobileToggle');
-  const navLinks = document.getElementById('chuktaNavLinks');
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navMenu = document.getElementById('navMenu');
 
-  if (mobileToggle && navLinks) {
+  if (mobileToggle && navMenu) {
     mobileToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
+      const isOpen = navMenu.classList.toggle('open');
       mobileToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    navLinks.querySelectorAll('a').forEach(link => {
+    navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
+        navMenu.classList.remove('open');
         mobileToggle.setAttribute('aria-expanded', 'false');
       });
     });
@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
       questionBtn.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
 
-        // Close all other accordion items
+        // Close all others
         faqItems.forEach(otherItem => {
           otherItem.classList.remove('active');
         });
 
-        // Toggle current item
+        // Toggle clicked
         if (!isActive) {
           item.classList.add('active');
         }
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!input || !input.value) return;
 
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Joining...';
+      submitBtn.textContent = 'Saving...';
       submitBtn.disabled = true;
 
       setTimeout(() => {
@@ -66,22 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (waitlistMsg) {
           waitlistMsg.className = 'waitlist-msg success';
-          waitlistMsg.textContent = "You're on the list! We'll notify you the moment Chukta launches for early access.";
+          waitlistMsg.textContent = "Thank you! You're on the early access list. We'll send your invite soon.";
           waitlistMsg.style.display = 'block';
 
           setTimeout(() => {
             waitlistMsg.style.display = 'none';
           }, 6000);
         }
-      }, 900);
+      }, 700);
     });
   }
 
-  // Copyright Year
-  const yearSpans = document.querySelectorAll('.current-year');
-  const thisYear = new Date().getFullYear();
-  yearSpans.forEach(span => {
-    span.textContent = thisYear;
+  // Ensure legal links always resolve inside /chukta/
+  document.querySelectorAll('a[href="privacy-policy.html"], a[href="terms-and-conditions.html"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = link.getAttribute('href');
+      const pathname = window.location.pathname;
+      if (!pathname.includes('/chukta/') && !pathname.endsWith('/chukta/index.html')) {
+        e.preventDefault();
+        window.location.href = window.location.origin + '/chukta/' + target;
+      }
+    });
   });
 });
-

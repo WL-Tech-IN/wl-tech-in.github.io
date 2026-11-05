@@ -3,243 +3,347 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms & Conditions — Chukta</title>
-  <meta name="description" content="Terms and Conditions of Service for Chukta application. Please review user obligations, service terms, and limitations of liability.">
-  <meta name="robots" content="index, follow">
+  <title>Chukta — Terms & Conditions & Privacy Policy</title>
+  <style>
+    :root {
+      --primary: #B1480D;
+      --primary-hover: #8A3408;
+      --bg: #FDFBF9;
+      --surface: #FFFFFF;
+      --text-main: #1F2937;
+      --text-muted: #6B7280;
+      --border: #E5E7EB;
+      --accent-bg: #FEF3EB;
+    }
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="../assets/css/chukta.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2310b981'/><path d='M9 16l4 4 10-10' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text-main);
+      background-color: var(--bg);
+      padding: 0;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-badge {
+      background: var(--accent-bg);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(177, 72, 13, 0.2);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      background: var(--bg);
+      padding: 4px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      padding: 6px 16px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 24px 80px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: var(--text-main);
+      margin: 28px 0 12px;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin: 16px 0 8px;
+    }
+
+    p, ul {
+      margin-bottom: 14px;
+      color: #374151;
+      font-size: 0.96rem;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .callout {
+      background: var(--accent-bg);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      font-size: 0.92rem;
+      color: #5A2103;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      .header-container {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+      }
+      .tabs {
+        justify-content: center;
+      }
+      .card {
+        padding: 24px 20px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Ambient Background -->
-  <div class="chukta-ambient" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-3"></div>
-  </div>
-
-  <!-- Navigation -->
-  <header class="chukta-nav">
-    <div class="container">
-      <div class="nav-wrapper">
-        <a href="index.html" class="brand">
-          <div class="brand-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <span>Chukta</span>
-        </a>
-
-        <nav class="nav-links">
-          <a href="index.html">App Home</a>
-          <a href="index.html#features">Features</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-and-conditions.html" style="color:#ffffff; font-weight:700;">Terms & Conditions</a>
-        </nav>
-
-        <div>
-          <a href="index.html" class="btn-chukta btn-chukta-outline btn-chukta-sm">
-            &larr; Back to Chukta
-          </a>
-        </div>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        Chukta
+        <span class="brand-badge">Legal</span>
+      </a>
+      <div class="tabs">
+        <button class="tab-btn" id="btn-privacy" onclick="switchTab('privacy')">Privacy Policy</button>
+        <button class="tab-btn active" id="btn-terms" onclick="switchTab('terms')">Terms & Conditions</button>
       </div>
     </div>
   </header>
 
-  <main class="legal-page">
-    <div class="container">
-      <div class="legal-header">
-        <span class="legal-badge">Legal Documentation</span>
-        <h1 class="legal-title">Terms & Conditions</h1>
-        <div class="legal-meta">
-          Last Updated: November 5, 2026 &bull; Effective Immediately
-        </div>
+  <main>
+    <!-- Terms & Conditions Section (Active on this page) -->
+    <section id="section-terms" class="card">
+      <h1>Terms & Conditions</h1>
+      <div class="meta">Last Updated: November 5, 2026</div>
+
+      <p>Please read these Terms & Conditions ("Terms") carefully before using the <strong>Chukta</strong> mobile application operated by <strong>WL-TECH-IN</strong> ("we", "us", or "our").</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using Chukta, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access or use the application.</p>
+
+      <h2>2. Nature of the Service</h2>
+      <p>Chukta provides expense tracking, bill splitting, and balance calculation tools for personal and peer-to-peer group convenience. You acknowledge that:</p>
+      <ul>
+        <li>Chukta is <strong>not</strong> a bank, non-banking financial institution (NBFC), digital wallet, or escrow agent.</li>
+        <li>Chukta does not hold or process fiat funds directly. "Settlements" recorded within the application represent peer agreements between users and do not guarantee actual monetary transfer.</li>
+      </ul>
+
+      <h2>3. User Accounts & Responsibilities</h2>
+      <ul>
+        <li>You must provide an accurate phone number to receive your one-time authentication code (OTP).</li>
+        <li>You are responsible for maintaining the confidentiality of your device and session tokens.</li>
+        <li>You agree not to use the application for any unlawful purposes, fraudulent activity, or harassment of other group participants.</li>
+      </ul>
+
+      <h2>4. Intellectual Property</h2>
+      <p>The application, including its logos, brand identity, UI design, code, and graphics, remains the exclusive property of WL-TECH-IN and is protected by applicable copyright and intellectual property laws.</p>
+
+      <h2>5. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, WL-TECH-IN shall not be liable for any indirect, incidental, punitive, or consequential damages resulting from:</p>
+      <ul>
+        <li>Calculation inaccuracies or human input errors made by users or group participants.</li>
+        <li>Disputes between users regarding peer-to-peer debts or informal settlements.</li>
+        <li>Temporary service interruptions, scheduled maintenance, or network outages.</li>
+      </ul>
+
+      <h2>6. Termination</h2>
+      <p>We reserve the right to suspend or terminate access to the application immediately, without prior notice, if you breach any provision of these Terms.</p>
+
+      <h2>7. Changes to These Terms</h2>
+      <p>We may update these Terms periodically. We will notify users of any material changes by updating the "Last Updated" date on this page. Your continued use of the app constitutes acceptance of the amended terms.</p>
+
+      <h2>8. Governing Law</h2>
+      <p>These Terms shall be governed and interpreted in accordance with the laws of India, without regard to its conflict of law provisions.</p>
+
+      <h2>9. Contact Us</h2>
+      <p>For questions or support regarding these Terms, please reach out to us at <a href="mailto:support@chukta.app">support@chukta.app</a>.</p>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="section-privacy" class="card hidden">
+      <h1>Privacy Policy</h1>
+      <div class="meta">Last Updated: November 5, 2026</div>
+
+      <p>Welcome to <strong>Chukta</strong>, developed and operated by <strong>WL-TECH-IN</strong> ("we", "our", or "us"). We value your trust and are committed to protecting your personal information. This Privacy Policy outlines what information we collect, how it is processed, and your rights when using our mobile application and related services.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>When you register and use Chukta, we collect the following categories of information:</p>
+      <ul>
+        <li><strong>Account & Authentication:</strong> Your mobile phone number (used for secure SMS OTP authentication) and optional profile information such as your name or display nickname.</li>
+        <li><strong>Expense & Transaction Data:</strong> Expense amounts, split categories, item descriptions, settlement statuses, and currency preferences entered by you or your group participants.</li>
+        <li><strong>Contacts (Optional Permission):</strong> If granted, Chukta accesses your device contacts solely to make finding, adding, and splitting bills with friends easier. Contact data is never sold, shared with third parties, or used for unsolicited marketing.</li>
+        <li><strong>Device & Analytics Data:</strong> Technical diagnostic information, app performance metrics, device type, and OS version collected via Firebase Crashlytics & Google Analytics to identify crashes and improve stability.</li>
+        <li><strong>Push Notification Tokens:</strong> Device push tokens processed via OneSignal to deliver real-time notifications about group updates, added expenses, and settlement activities.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Important:</strong> Chukta is an expense tracking and calculation platform. We <em>do not</em> store credit card numbers, debit card PINs, UPI PINs, or direct access credentials to your bank accounts.
       </div>
 
-      <div class="legal-content">
-        <!-- Table of Contents Sticky Sidebar -->
-        <aside class="legal-toc">
-          <h4>Table of Contents</h4>
-          <div class="legal-toc-list">
-            <a href="#acceptance">1. Acceptance of Terms</a>
-            <a href="#eligibility">2. Eligibility</a>
-            <a href="#service-nature">3. Nature of the Service</a>
-            <a href="#account-security">4. Account Responsibilities</a>
-            <a href="#acceptable-use">5. Acceptable Use Policy</a>
-            <a href="#financial-disclaimer">6. Financial Disclaimer</a>
-            <a href="#intellectual-property">7. Intellectual Property</a>
-            <a href="#termination">8. Termination & Suspension</a>
-            <a href="#warranty-disclaimer">9. Disclaimer of Warranties</a>
-            <a href="#limitation-liability">10. Limitation of Liability</a>
-            <a href="#governing-law">11. Governing Law</a>
-            <a href="#amendments">12. Modifications to Terms</a>
-            <a href="#contact">13. Contact Details</a>
-          </div>
-        </aside>
+      <h2>2. How We Use Your Information</h2>
+      <ul>
+        <li>To provide core expense tracking, group splitting, and settlement calculation features.</li>
+        <li>To authenticate your identity securely via SMS verification.</li>
+        <li>To notify you of expense additions, group invitations, and payment reminders.</li>
+        <li>To detect bugs, prevent fraud, and ensure device security (such as root/jailbreak integrity).</li>
+        <li>To respect and persist your app preferences, such as Dark Mode and preferred language (English, Hindi, Marathi).</li>
+      </ul>
 
-        <!-- Policy Body -->
-        <article class="legal-body">
-          <div class="legal-callout">
-            <p>
-              <strong>Important Notice:</strong> Chukta is an expense ledger, calculation, and balance-tracking utility. Chukta is not a bank, depository institution, or payment service provider. All actual fund transfers are carried out directly between users via external payment networks.
-            </p>
-          </div>
+      <h2>3. Third-Party Services</h2>
+      <p>We work with trusted third-party service providers who assist us in operating Chukta:</p>
+      <ul>
+        <li><strong>Google Firebase:</strong> Authentication infrastructure, Analytics, and Crashlytics.</li>
+        <li><strong>OneSignal:</strong> Delivering push notification alerts.</li>
+      </ul>
 
-          <section id="acceptance">
-            <h2>1. Acceptance of Terms</h2>
-            <p>
-              These Terms and Conditions ("Terms") constitute a legally binding agreement between you and <strong>WLTech</strong> ("Organisation", "we", "us", or "our"), governing your access to and use of the <strong>Chukta</strong> mobile application, software, and related services (collectively, the "Service").
-            </p>
-            <p>
-              By installing, downloading, or using Chukta, you agree to comply with and be bound by these Terms and our Privacy Policy. If you do not accept these Terms, you may not use the Service.
-            </p>
-          </section>
+      <h2>4. Data Retention and Deletion</h2>
+      <p>We retain your account and expense records for as long as your account is active. You may request account deletion or data removal at any time by contacting our support team. Upon verification, your profile and associated personal identifiers will be permanently deleted from our primary servers.</p>
 
-          <section id="eligibility">
-            <h2>2. Eligibility</h2>
-            <p>
-              To use Chukta, you must be at least 13 years old (or the minimum legal age required in your jurisdiction to form a binding contract). By using the Service, you represent and warrant that you have full legal capacity to enter into these Terms.
-            </p>
-          </section>
+      <h2>5. Security of Your Data</h2>
+      <p>We implement industry-standard encryption protocols (HTTPS/TLS) for data in transit and secure token storage mechanisms on your device. While we strive to protect your data, no method of transmission or electronic storage is 100% impenetrable.</p>
 
-          <section id="service-nature">
-            <h2>3. Nature of the Service</h2>
-            <p>
-              Chukta provides consumer tools to log, organize, calculate, and simplify group expenses, bills, and balances among friends, flatmates, colleagues, and travel groups.
-            </p>
-            <ul>
-              <li><strong>Record Keeping:</strong> Chukta acts as a digital record book for shared obligations.</li>
-              <li><strong>Calculations:</strong> The software simplifies debts by calculating net balances owed between group participants.</li>
-              <li><strong>Payment Redirection:</strong> The application may generate deep links to third-party payment gateways or UPI apps for user convenience. However, transactions execute entirely outside of Chukta's servers.</li>
-            </ul>
-          </section>
+      <h2>6. Children’s Privacy</h2>
+      <p>Chukta is not directed to individuals under the age of 13 (or the minimum legal age in your jurisdiction). We do not knowingly collect personal information from children.</p>
 
-          <section id="account-security">
-            <h2>4. Account Responsibilities</h2>
-            <p>When you create an account on Chukta, you agree to:</p>
-            <ul>
-              <li>Provide accurate, current, and complete registration details.</li>
-              <li>Maintain the confidentiality and security of your login credentials and device authentication.</li>
-              <li>Promptly notify us if you discover or suspect any unauthorized access to your account.</li>
-              <li>Accept responsibility for all activities that occur under your account.</li>
-            </ul>
-          </section>
-
-          <section id="acceptable-use">
-            <h2>5. Acceptable Use Policy</h2>
-            <p>You agree not to use Chukta to:</p>
-            <ul>
-              <li>Violate any local, national, or international laws, regulations, or ordinances.</li>
-              <li>Record or facilitate illegal financial transactions, money laundering, extortion, or fraudulent schemes.</li>
-              <li>Harass, threaten, defame, or abuse other group members.</li>
-              <li>Attempt to reverse-engineer, decompile, extract source code, or disrupt the operation of Chukta servers.</li>
-              <li>Deploy automated bots, spiders, scrapers, or scripts that burden our infrastructure.</li>
-            </ul>
-          </section>
-
-          <section id="financial-disclaimer">
-            <h2>6. Financial Disclaimer & Disputes Between Users</h2>
-            <p>
-              <strong>Chukta does not hold or guarantee any funds:</strong>
-            </p>
-            <ul>
-              <li>Balances displayed within Chukta are based solely on user inputs. We do not verify whether expenses actually occurred or whether funds were legitimately received.</li>
-              <li>Any financial disputes regarding who owes whom or the validity of an expense must be resolved directly between the users involved.</li>
-              <li>We are not responsible for errors made by users when inputting numbers, selecting participants, or using third-party banking/UPI applications.</li>
-            </ul>
-          </section>
-
-          <section id="intellectual-property">
-            <h2>7. Intellectual Property Rights</h2>
-            <p>
-              All rights, titles, and interests in and to Chukta — including software code, interfaces, designs, icons, graphics, logos, and trademarks — are and will remain the exclusive property of <strong>WLTech</strong> and its licensors.
-            </p>
-            <p>
-              You are granted a limited, personal, non-exclusive, non-transferable, and revocable license to download and use the Chukta application solely for your personal, non-commercial purposes.
-            </p>
-          </section>
-
-          <section id="termination">
-            <h2>8. Termination & Suspension</h2>
-            <p>
-              We reserve the right, in our sole discretion, to suspend or terminate your access to Chukta at any time without prior notice if we determine that you have violated these Terms, engaged in fraudulent conduct, or posed a risk to the security of other users or our infrastructure.
-            </p>
-            <p>
-              You may terminate your account at any time by utilizing the deletion feature in the application settings or by contacting our support team.
-            </p>
-          </section>
-
-          <section id="warranty-disclaimer">
-            <h2>9. Disclaimer of Warranties</h2>
-            <p>
-              Chukta is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis, without warranties of any kind, whether express, implied, or statutory. WLTech expressly disclaims all implied warranties of merchantability, fitness for a particular purpose, uninterrupted availability, accuracy, and non-infringement.
-            </p>
-          </section>
-
-          <section id="limitation-liability">
-            <h2>10. Limitation of Liability</h2>
-            <p>
-              To the fullest extent permitted by applicable law, in no event shall WLTech, its founders, officers, employees, or partners be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, loss of data, personal disputes between users, or failures of third-party payment providers.
-            </p>
-            <p>
-              In all cases, our total aggregate liability arising out of or related to your use of Chukta shall not exceed the amount you paid to us (if any) to use the Service during the twelve (12) months preceding the claim, or ₹1,000 INR (whichever is lower).
-            </p>
-          </section>
-
-          <section id="governing-law">
-            <h2>11. Governing Law & Dispute Resolution</h2>
-            <p>
-              These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law principles. Any legal suit, action, or proceeding arising out of or related to these Terms or the Service shall be instituted exclusively in the competent courts located in India.
-            </p>
-          </section>
-
-          <section id="amendments">
-            <h2>12. Modifications to Terms</h2>
-            <p>
-              We may revise these Terms periodically. We will provide notice of significant modifications by updating the date at the top of these Terms or via in-app notification. Your continued use of Chukta after the effective date of revised Terms constitutes your acceptance of the changes.
-            </p>
-          </section>
-
-          <section id="contact">
-            <h2>13. Contact Details</h2>
-            <p>
-              For legal inquiries, terms clarification, or general assistance, please reach out to our team:
-            </p>
-            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--chukta-border); border-radius: var(--radius-sm); padding: 1.5rem; margin-top: 1rem;">
-              <p style="margin-bottom: 0.5rem; color:#ffffff;"><strong>WLTech — Legal & Compliance</strong></p>
-              <p style="margin-bottom: 0.5rem;">Legal Inquiries: <a href="mailto:legal@chukta.app" style="color: var(--brand-green-light);">legal@chukta.app</a></p>
-              <p style="margin-bottom: 0.5rem;">Support Desk: <a href="mailto:support@chukta.app" style="color: var(--brand-green-light);">support@chukta.app</a></p>
-              <p style="margin-bottom: 0;">Organisation Portal: <a href="https://wltechin.github.io/" style="color: var(--brand-green-light);">https://wltechin.github.io/</a></p>
-            </div>
-          </section>
-        </article>
-      </div>
-    </div>
+      <h2>7. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@chukta.app">support@chukta.app</a></li>
+        <li><strong>Organization:</strong> WL-TECH-IN</li>
+      </ul>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="chukta-footer">
-    <div class="container">
-      <div class="footer-bottom-bar">
-        <div>
-          &copy; <span class="current-year">2026</span> Chukta &bull; Built by WLTech. All rights reserved.
-        </div>
-        <div>
-          <a href="index.html" style="color: var(--text-sub); margin-right: 1.5rem;">Chukta Home</a>
-          <a href="privacy-policy.html" style="color: var(--text-sub);">Privacy Policy</a>
-        </div>
-      </div>
-    </div>
+  <footer>
+    &copy; 2026 WL-TECH-IN. All rights reserved. Chukta App.
   </footer>
 
-  <script src="../assets/js/chukta.js"></script>
+  <script>
+    function switchTab(tab) {
+      const privacySec = document.getElementById('section-privacy');
+      const termsSec = document.getElementById('section-terms');
+      const privacyBtn = document.getElementById('btn-privacy');
+      const termsBtn = document.getElementById('btn-terms');
+
+      if (tab === 'privacy') {
+        privacySec.classList.remove('hidden');
+        termsSec.classList.add('hidden');
+        privacyBtn.classList.add('active');
+        termsBtn.classList.remove('active');
+        window.location.hash = 'privacy';
+      } else {
+        privacySec.classList.add('hidden');
+        termsSec.classList.remove('hidden');
+        privacyBtn.classList.remove('active');
+        termsBtn.classList.add('active');
+        window.location.hash = 'terms';
+      }
+    }
+
+    // Auto-switch based on URL hash (default to terms on this page if not specified)
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash === '#privacy') {
+        switchTab('privacy');
+      } else {
+        switchTab('terms');
+      }
+    });
+  </script>
 </body>
 </html>
-
