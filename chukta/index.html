@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chukta — Settle with Ease, Split with Friends</title>
+  <meta name="description" content="Chukta is the modern expense tracking and settlement app for trips, flatmates, and friends. Split bills seamlessly and settle up in one tap.">
+  <meta name="keywords" content="Chukta, bill split app, expense tracker, settle up, group expenses, UPI settlement, flatmate expenses">
+  <meta name="author" content="WLTech">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chukta — Settle with Ease, Split with Friends">
+  <meta property="og:description" content="Effortlessly track shared expenses and settle balances in a single tap. Zero stress, zero awkward math.">
+  <meta property="og:url" content="https://wltechin.github.io/chukta/">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/chukta.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2310b981'/><path d='M9 16l4 4 10-10' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+
+  <!-- Ambient background glow -->
+  <div class="chukta-ambient" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="chukta-nav">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand">
+          <div class="brand-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span>Chukta</span>
+        </a>
+
+        <nav class="nav-links" id="chuktaNavLinks">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#security">Security</a>
+          <a href="#faq">FAQ</a>
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms-and-conditions.html">Terms</a>
+        </nav>
+
+        <div>
+          <a href="#waitlist" class="btn-chukta btn-chukta-primary btn-chukta-sm">
+            Get Early Access
+          </a>
+        </div>
+
+        <button class="mobile-toggle" id="chuktaMobileToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-tag">
+              <span class="hero-tag-pulse"></span>
+              <span>The Next Generation Settlement App</span>
+            </div>
+
+            <h1 class="hero-title">
+              Split without stress. <br>
+              <span class="hero-highlight">Settle in a tap.</span>
+            </h1>
+
+            <p class="hero-desc">
+              Chukta is the lightning-fast companion for tracking shared expenses with roommates, group trips, dinners, and events. No awkward math, no forgotten debts. Just pure clarity.
+            </p>
+
+            <div class="hero-btns">
+              <a href="#waitlist" class="btn-chukta btn-chukta-primary">
+                Join the Early Access Waitlist
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#features" class="btn-chukta btn-chukta-outline">
+                Explore Features
+              </a>
+            </div>
+
+            <div class="hero-trust">
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Zero Ads</span>
+              </div>
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bank-Grade Encryption</span>
+              </div>
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>1-Tap Settle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- App Mockup Preview -->
+          <div class="mockup-container">
+            <div class="mockup-phone">
+              <div class="phone-notch"></div>
+
+              <div class="app-header">
+                <div>
+                  <div class="app-user-greeting">Welcome back,</div>
+                  <div class="app-user-name">Rahul Sharma</div>
+                </div>
+                <div style="width: 34px; height: 34px; border-radius: 50%; background: #374151; display:flex; align-items:center; justify-content:center; font-size: 0.85rem; font-weight:700;">
+                  RS
+                </div>
+              </div>
+
+              <div class="balance-card">
+                <div class="balance-label">Overall Group Balance</div>
+                <div class="balance-amount">+ ₹2,450</div>
+                <div class="balance-meta">
+                  <span>You are owed: ₹3,200</span>
+                  <span>You owe: ₹750</span>
+                </div>
+              </div>
+
+              <div class="activity-title">Active Groups & Activity</div>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-left">
+                    <div class="activity-icon">🏖️</div>
+                    <div>
+                      <div class="activity-name">Goa Trip 2026</div>
+                      <div class="activity-time">Cab fare paid by you</div>
+                    </div>
+                  </div>
+                  <div class="activity-amount positive">+ ₹1,200</div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-left">
+                    <div class="activity-icon">🏠</div>
+                    <div>
+                      <div class="activity-name">Flat 402 - Rent & Bills</div>
+                      <div class="activity-time">WiFi bill split 3 ways</div>
+                    </div>
+                  </div>
+                  <div class="activity-amount positive">+ ₹450</div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-left">
+                    <div class="activity-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">✓</div>
+                    <div>
+                      <div class="activity-name">Amit Verma</div>
+                      <div class="activity-time">Settled via UPI</div>
+                    </div>
+                  </div>
+                  <div class="activity-amount settled">Chukta!</div>
+                </div>
+              </div>
+
+              <!-- Floating settlement badge -->
+              <div class="mockup-floating-badge">
+                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981;"></span>
+                <span>Debt settled: ₹800 cleared!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-subtag">Designed for Simplicity</span>
+          <h2 class="section-h2">Everything You Need to Keep Finances Clear</h2>
+          <p class="section-subtext">
+            Chukta turns messy group expenses and complicated calculations into a breeze with intuitive features crafted for everyday use.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Smart Group Splitting</h3>
+            <p>
+              Split equally, by exact amount, percentage, or custom itemized bills. Perfect for flatmates, couples, dinner outings, and multi-day vacations.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3>1-Tap "Chukta" Settlements</h3>
+            <p>
+              Instantly settle balances with built-in deep links to your favorite payment apps (UPI, GPay, PhonePe, Paytm, or Net Banking). One tap and debts are cleared.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 1l22 22"></path>
+                <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+                <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+                <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+                <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+              </svg>
+            </div>
+            <h3>Offline-First Architecture</h3>
+            <p>
+              Trekking in remote hills or traveling abroad with no cell reception? Chukta works completely offline and syncs seamlessly the second you reconnect.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3>Multi-Currency Support</h3>
+            <p>
+              Traveling internationally? Record expenses in any local currency (USD, EUR, GBP, AED, THB) with auto-converted exchange rates for easy reconciliation.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Private & Ad-Free</h3>
+            <p>
+              No annoying banner ads, no targeted behavioral tracking, and no selling your financial history. Your records are completely private to your groups.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>Smart Export & Summaries</h3>
+            <p>
+              Generate clean PDF breakdowns or CSV exports of your monthly expenses or completed trips for personal records and expense reimbursements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section" id="how-it-works" style="background: rgba(17, 24, 39, 0.4); border-top: 1px solid var(--chukta-border); border-bottom: 1px solid var(--chukta-border);">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-subtag">How It Works</span>
+          <h2 class="section-h2">Settling Debts in 3 Simple Steps</h2>
+          <p class="section-subtext">
+            No steep learning curve. From start to finish, Chukta is designed to save you time.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-badge">Step 1</span>
+            <h3>Create a Group or Duo</h3>
+            <p>
+              Start a group for your apartment, upcoming vacation, dinner party, or simply a 1-on-1 tab with your best friend or partner.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-badge">Step 2</span>
+            <h3>Add Expenses in Seconds</h3>
+            <p>
+              Type in the amount, tag who was involved, and let Chukta calculate each person's exact share automatically in real time.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-badge">Step 3</span>
+            <h3>Hit "Chukta" to Settle Up</h3>
+            <p>
+              When it's time to clear balances, tap Settle. Pay via UPI or your preferred payment method, and mark the ledger Chukta with 1 tap.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Privacy Highlight -->
+    <section class="section" id="security">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-lg); padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap;">
+          <div style="max-width: 620px;">
+            <span class="section-subtag">Privacy First</span>
+            <h2 style="font-size: 2rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">
+              Your Financial Relationships Are Sacred
+            </h2>
+            <p style="color: var(--text-dim); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+              We believe financial apps shouldn't harvest your contacts or trade your spending history. Chukta is engineered by WLTech with zero ad tracking, strict data minimization, and industry-standard TLS encryption.
+            </p>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+              <a href="privacy-policy.html" style="color: var(--brand-green-light); font-weight: 600; text-decoration: underline;">Read our Privacy Policy &rarr;</a>
+              <a href="terms-and-conditions.html" style="color: var(--text-dim); text-decoration: underline;">Review Terms & Conditions &rarr;</a>
+            </div>
+          </div>
+          <div style="width: 120px; height: 120px; border-radius: 30px; background: rgba(16, 185, 129, 0.15); border: 2px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; color: var(--brand-green-light);">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-subtag">Got Questions?</span>
+          <h2 class="section-h2">Frequently Asked Questions</h2>
+          <p class="section-subtext">
+            Everything you need to know about Chukta and how it works.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What does "Chukta" mean?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              "Chukta" (चुकता) translates to "cleared", "settled", or "resolved". That is the core philosophy of our application — providing a quick, peaceful way to clear all debts and financial obligations with zero confusion.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is Chukta free to use?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Yes, Chukta's core features — creating groups, tracking shared expenses, split calculations, and settlement reminders — are completely free and without intrusive ads.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does Chukta hold or handle my money?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              No. Chukta is an expense ledger and settlement tracking tool. When settling up, Chukta redirects you securely to your trusted payment applications (UPI apps, bank apps, etc.) or lets you record cash settlements. We never hold your money in our own custody.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I use Chukta without internet access?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Yes! Chukta is built with an offline-first architecture. You can log expenses while on flights, road trips, or remote campgrounds. All updates sync safely as soon as any device in the group goes back online.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Who builds Chukta?</span>
+              <svg class="faq-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              Chukta is engineered and maintained by WLTech, a consumer technology organisation passionate about building intuitive products for the world.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist / Early Access CTA -->
+    <section class="section" id="waitlist">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Be the first to experience Chukta.</h2>
+          <p>
+            Join our private beta early access list. We are rolling out invites soon to users who want a cleaner, faster way to settle everyday bills.
+          </p>
+
+          <form class="waitlist-form" id="waitlistForm">
+            <input type="email" class="waitlist-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn-chukta btn-chukta-primary">
+              Request Invite
+            </button>
+          </form>
+
+          <div class="waitlist-msg" id="waitlistMsg"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="chukta-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand">
+            <div class="brand-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span>Chukta</span>
+          </div>
+          <p class="footer-desc">
+            Settle with ease, live with peace of mind. An effortless consumer app crafted by WLTech for transparent group expenses.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#security">Security</a>
+            <a href="#waitlist">Early Access</a>
+          </div>
+
+          <div class="footer-nav-col">
+            <h4>Legal & Trust</h4>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="mailto:support@chukta.app">Security Contact</a>
+          </div>
+
+          <div class="footer-nav-col">
+            <h4>Organisation</h4>
+            <a href="../index.html">WLTech Home</a>
+            <a href="mailto:contact@wltech.in">Corporate Inquiries</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; <span class="current-year">2026</span> Chukta &bull; A Product of WLTech. All rights reserved.
+        </div>
+        <div>
+          <a href="privacy-policy.html" style="color:var(--text-sub); margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="terms-and-conditions.html" style="color:var(--text-sub);">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/chukta.js"></script>
+</body>
+</html>
+
