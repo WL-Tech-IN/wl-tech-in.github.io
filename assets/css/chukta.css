@@ -4,6 +4,8 @@
    Derived from chukta/privacy-policy.html
    =================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
 :root {
   --primary: #B1480D;
   --primary-hover: #8A3408;
@@ -16,6 +18,7 @@
   --border-focus: rgba(177, 72, 13, 0.4);
   --accent-bg: #FEF3EB;
   --accent-callout-text: #5A2103;
+  --font-brand: 'Agbalumo', cursive, system-ui, sans-serif;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
@@ -100,12 +103,15 @@ header {
   gap: 10px;
   text-decoration: none;
   color: var(--primary);
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-family: var(--font-brand);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .brand-badge {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: var(--accent-bg);
   color: var(--primary);
   font-size: 0.75rem;
@@ -113,6 +119,12 @@ header {
   padding: 3px 8px;
   border-radius: var(--radius-full);
   border: 1px solid rgba(177, 72, 13, 0.2);
+  line-height: normal;
+}
+
+.chukta-label {
+  font-family: var(--font-brand);
+  font-weight: 400;
 }
 
 .nav-menu {
@@ -292,178 +304,29 @@ header {
 /* Phone Mockup */
 .mockup-wrapper {
   position: relative;
-  max-width: 360px;
+  max-width: 320px;
   margin: 0 auto;
 }
 
 .mockup-card {
-  background: var(--surface);
-  border: 8px solid #F3F4F6;
-  border-radius: 36px;
-  padding: 20px 16px;
-  box-shadow: var(--shadow-lg), var(--shadow-warm);
+  background: #000000;
+  border: 10px solid #1F2937;
+  border-radius: 44px;
+  padding: 0;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05), var(--shadow-warm);
   position: relative;
-}
-
-.mockup-notch {
-  width: 90px;
-  height: 16px;
-  background: #E5E7EB;
-  border-radius: 0 0 10px 10px;
-  margin: -20px auto 16px;
-}
-
-.mockup-app-header {
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  padding: 0 4px;
 }
 
-.mockup-greeting {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.mockup-user {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-.mockup-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--accent-bg);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.825rem;
-  font-weight: 700;
-  border: 1px solid rgba(177, 72, 13, 0.2);
-}
-
-.mockup-balance-box {
-  background: var(--primary-gradient);
-  border-radius: 14px;
-  padding: 18px;
-  color: #ffffff;
-  margin-bottom: 18px;
-  box-shadow: 0 6px 16px rgba(177, 72, 13, 0.3);
-}
-
-.balance-title {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.9;
-}
-
-.balance-val {
-  font-size: 1.85rem;
-  font-weight: 800;
-  margin: 4px 0 10px;
-  letter-spacing: -0.02em;
-}
-
-.balance-sub {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.74rem;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.mockup-list-label {
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 10px;
-  padding: 0 4px;
-}
-
-.mockup-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mockup-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 12px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-}
-
-.mockup-row-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.mockup-row-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--accent-bg);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-}
-
-.mockup-row-name {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.mockup-row-sub {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-}
-
-.mockup-row-amount {
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.amount-positive {
-  color: #059669;
-}
-
-.amount-settled {
-  color: var(--primary);
-  background: var(--accent-bg);
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-}
-
-.mockup-floating-pill {
-  position: absolute;
-  bottom: -16px;
-  right: -8px;
-  background: var(--surface);
-  border: 1px solid rgba(177, 72, 13, 0.25);
-  box-shadow: var(--shadow-md);
-  padding: 10px 14px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--primary);
+.mockup-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 34px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 /* Sections Common */
@@ -843,5 +706,18 @@ footer {
 
   .card {
     padding: 24px 20px;
+  }
+
+  .mockup-wrapper {
+    max-width: 260px;
+  }
+
+  .mockup-card {
+    border-width: 8px;
+    border-radius: 36px;
+  }
+
+  .mockup-img {
+    border-radius: 28px;
   }
 }
