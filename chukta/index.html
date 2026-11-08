@@ -43,6 +43,7 @@
 
       <nav class="nav-menu" id="navMenu">
         <a href="#features" class="nav-link">Features</a>
+        <a href="#screens" class="nav-link">Screens</a>
         <a href="#how-it-works" class="nav-link">How It Works</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
@@ -113,8 +114,22 @@
 
           <!-- App Mockup Preview -->
           <div class="mockup-wrapper">
+            <div class="mockup-theme-switcher">
+              <button type="button" class="mockup-switch-btn active" data-theme-btn="dark">
+                🌙 Dark Mode
+              </button>
+              <button type="button" class="mockup-switch-btn" data-theme-btn="light">
+                ☀️ Light Mode
+              </button>
+            </div>
             <div class="mockup-card">
-              <img src="../assets/images/home.png" onerror="this.onerror=null; this.src='assets/images/home.png';" alt="Chukta App Home Preview" class="mockup-img">
+              <img id="heroMockupImg"
+                   src="../assets/images/chukta_dark/home.png"
+                   data-dark-src="../assets/images/chukta_dark/home.png"
+                   data-light-src="../assets/images/chukta_light/home.png"
+                   onerror="this.onerror=null; this.src='../assets/images/home.png';"
+                   alt="Chukta App Home Preview"
+                   class="mockup-img theme-switchable-img">
             </div>
           </div>
         </div>
@@ -212,6 +227,167 @@
             <p>
               We never hold credit card PINs, UPI MPINs, or custody of your funds. Settlements happen directly peer-to-peer over your trusted banking rails.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Screens & Features Showcase -->
+    <section class="section screens-section" id="screens">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Visual Tour & Features</span>
+          <h2 class="section-title">Designed for Real Life. In Light & Dark.</h2>
+          <p class="section-desc">
+            Explore Chukta's actual screens. Toggle between native Dark Mode and Light Mode below to see how effortless, human-centered expense tracking looks in both themes.
+          </p>
+        </div>
+
+        <!-- Interactive Global Mode Switcher -->
+        <div class="theme-toggle-bar">
+          <span class="theme-toggle-label">Preview Interface In:</span>
+          <div class="theme-pills">
+            <button type="button" class="theme-pill-btn active" data-theme-btn="dark">
+              <span>🌙</span> Dark Mode
+            </button>
+            <button type="button" class="theme-pill-btn" data-theme-btn="light">
+              <span>☀️</span> Light Mode
+            </button>
+          </div>
+        </div>
+
+        <!-- Screens Grid -->
+        <div class="screens-grid">
+          <!-- Screen 1: Simplified Debts -->
+          <div class="screen-card">
+            <div class="screen-frame">
+              <div class="screen-phone-bezel">
+                <img src="../assets/images/chukta_dark/group%20simplified%20debt.png"
+                     data-dark-src="../assets/images/chukta_dark/group%20simplified%20debt.png"
+                     data-light-src="../assets/images/chukta_light/groups.png"
+                     onerror="this.onerror=null; this.src='assets/images/chukta_dark/group%20simplified%20debt.png';"
+                     alt="Simplified Group Debt Screen"
+                     class="screen-phone-img theme-switchable-img"
+                     loading="lazy">
+              </div>
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">Smart Algorithm</span>
+              <h3 class="screen-title">Simplified Group Debts</h3>
+              <p class="screen-desc">
+                Chukta automatically calculates the minimum number of transactions needed to settle all group IOUs, eliminating awkward circular debts between friends.
+              </p>
+            </div>
+          </div>
+
+          <!-- Screen 2: Flexible Splitting -->
+          <div class="screen-card">
+            <div class="screen-frame">
+              <div class="screen-phone-bezel">
+                <img src="../assets/images/chukta_dark/add%20expense.png"
+                     data-dark-src="../assets/images/chukta_dark/add%20expense.png"
+                     data-light-src="../assets/images/chukta_light/add%20expense%20percentage.png"
+                     onerror="this.onerror=null; this.src='assets/images/chukta_dark/add%20expense.png';"
+                     alt="Flexible Splitting Screen"
+                     class="screen-phone-img theme-switchable-img"
+                     loading="lazy">
+              </div>
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">Equal • Exact • %</span>
+              <h3 class="screen-title">Flexible Bill Splitting</h3>
+              <p class="screen-desc">
+                Split dinner bills equally, divide rent by exact figures, or split group vacations by custom percentages. Chukta effortlessly adapts to every real-life occasion.
+              </p>
+            </div>
+          </div>
+
+          <!-- Screen 3: Personal Expenses -->
+          <div class="screen-card">
+            <div class="screen-frame">
+              <div class="screen-phone-bezel">
+                <img src="../assets/images/chukta_dark/personal%20expenses.png"
+                     data-dark-src="../assets/images/chukta_dark/personal%20expenses.png"
+                     data-light-src="../assets/images/chukta_light/personal%20expenses.png"
+                     onerror="this.onerror=null; this.src='assets/images/chukta_dark/personal%20expenses.png';"
+                     alt="Personal Expenses Screen"
+                     class="screen-phone-img theme-switchable-img"
+                     loading="lazy">
+              </div>
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">Dual-Mode Tracker</span>
+              <h3 class="screen-title">Personal & Group in One Place</h3>
+              <p class="screen-desc">
+                Track your private daily solo spending without sharing it with group members. No need for a separate personal budgeting app—manage all expenses in Chukta.
+              </p>
+            </div>
+          </div>
+
+          <!-- Screen 4: 1-Tap Settlements -->
+          <div class="screen-card">
+            <div class="screen-frame">
+              <div class="screen-phone-bezel">
+                <img src="../assets/images/chukta_dark/record%20settlement.png"
+                     data-dark-src="../assets/images/chukta_dark/record%20settlement.png"
+                     data-light-src="../assets/images/chukta_light/settlements.png"
+                     onerror="this.onerror=null; this.src='assets/images/chukta_dark/record%20settlement.png';"
+                     alt="Record Settlement Screen"
+                     class="screen-phone-img theme-switchable-img"
+                     loading="lazy">
+              </div>
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">1-Tap Settle Up</span>
+              <h3 class="screen-title">Instant UPI & Cash Settlements</h3>
+              <p class="screen-desc">
+                Record settlements seamlessly via your favorite UPI payment apps or in cash. Counterparties receive real-time push notifications and balances zero out immediately.
+              </p>
+            </div>
+          </div>
+
+          <!-- Screen 5: Multi-Language -->
+          <div class="screen-card">
+            <div class="screen-frame">
+              <div class="screen-phone-bezel">
+                <img src="../assets/images/chukta_dark/hindi%20local.png"
+                     data-dark-src="../assets/images/chukta_dark/hindi%20local.png"
+                     data-light-src="../assets/images/chukta_light/localization.png"
+                     onerror="this.onerror=null; this.src='assets/images/chukta_dark/hindi%20local.png';"
+                     alt="Multi-Language Localization Screen"
+                     class="screen-phone-img theme-switchable-img"
+                     loading="lazy">
+              </div>
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">EN • HI • MR</span>
+              <h3 class="screen-title">Native Multi-Lingual Support</h3>
+              <p class="screen-desc">
+                Full native translations in English, Hindi (हिंदी), and Marathi (मराठी) with persistent cloud synchronization so your preferred language is preserved across devices.
+              </p>
+            </div>
+          </div>
+
+          <!-- Screen 6: Activity & Search -->
+          <div class="screen-card">
+            <div class="screen-frame">
+              <div class="screen-phone-bezel">
+                <img src="../assets/images/chukta_dark/activity.png"
+                     data-dark-src="../assets/images/chukta_dark/activity.png"
+                     data-light-src="../assets/images/chukta_light/search%20expense.png"
+                     onerror="this.onerror=null; this.src='assets/images/chukta_dark/activity.png';"
+                     alt="Activity Timeline and Search Screen"
+                     class="screen-phone-img theme-switchable-img"
+                     loading="lazy">
+              </div>
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">Full Audit Trail</span>
+              <h3 class="screen-title">Activity Timeline & Search</h3>
+              <p class="screen-desc">
+                Comprehensive timeline of every expense logged, edited, or settled with category icons, participant shares, and instant search across all your groups and friends.
+              </p>
+            </div>
           </div>
         </div>
       </div>

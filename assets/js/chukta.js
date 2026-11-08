@@ -88,4 +88,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Light / Dark Mode Screenshot Switcher
+  const updateScreenshotThemes = (mode) => {
+    const switchableImages = document.querySelectorAll('.theme-switchable-img');
+    const screenFrames = document.querySelectorAll('.screen-frame');
+
+    // Update all theme toggle buttons state
+    document.querySelectorAll('[data-theme-btn]').forEach(btn => {
+      if (btn.getAttribute('data-theme-btn') === mode) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Update background frame contrast for dark vs light
+    screenFrames.forEach(frame => {
+      if (mode === 'light') {
+        frame.classList.add('light-bg');
+      } else {
+        frame.classList.remove('light-bg');
+      }
+    });
+
+    // Animate & swap sources smoothly
+    switchableImages.forEach(img => {
+      img.classList.add('switching');
+      setTimeout(() => {
+        const newSrc = mode === 'light' ? img.getAttribute('data-light-src') : img.getAttribute('data-dark-src');
+        if (newSrc) {
+          img.src = newSrc;
+        }
+        img.classList.remove('switching');
+      }, 150);
+    });
+  };
+
+  document.querySelectorAll('[data-theme-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.getAttribute('data-theme-btn');
+      updateScreenshotThemes(mode);
+    });
+  });
 });
