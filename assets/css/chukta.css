@@ -760,6 +760,94 @@ header {
   padding: 0 20px 18px;
 }
 
+/* Business Enquiry Section */
+.business-card-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 44px 36px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 24px;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
+.business-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  transition: var(--transition);
+}
+
+.business-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(177, 72, 13, 0.35);
+  box-shadow: var(--shadow-sm);
+}
+
+.business-item-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--accent-bg);
+  border: 1px solid rgba(177, 72, 13, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.business-item-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.business-item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.business-item p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.business-cta-box {
+  background: var(--accent-bg);
+  border: 1px solid rgba(177, 72, 13, 0.25);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.business-cta-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5A2103;
+  margin-bottom: 6px;
+}
+
+.business-cta-content p {
+  color: #7E3106;
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 580px;
+}
+
 /* Waitlist Banner */
 .waitlist-card {
   background: var(--surface);
@@ -854,6 +942,251 @@ footer {
   color: var(--primary);
 }
 
+/* ===================================================================
+   Chukta Invite Page Styles
+   =================================================================== */
+.invite-page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.invite-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 48px 0 60px;
+}
+
+.invite-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 44px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.invite-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, #E06D2B 50%, #F59E0B 100%);
+}
+
+.invite-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-bg);
+  border: 1px solid rgba(177, 72, 13, 0.25);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.invite-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 6px rgba(177, 72, 13, 0.5);
+}
+
+.invite-title {
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.invite-highlight {
+  color: var(--primary);
+}
+
+.invite-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.invite-code-box {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: var(--bg);
+  border: 1px dashed rgba(177, 72, 13, 0.35);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  max-width: 420px;
+}
+
+.invite-code-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.invite-code-val {
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+}
+
+.invite-copy-btn {
+  margin-left: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.invite-copy-btn:hover {
+  background: var(--accent-bg);
+  color: var(--primary);
+}
+
+.playstore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #000000;
+  color: #ffffff !important;
+  padding: 12px 26px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.playstore-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  color: #ffffff !important;
+}
+
+.playstore-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.playstore-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.playstore-sub {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.playstore-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.invite-app-open-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+.invite-app-open-link:hover {
+  color: var(--primary);
+}
+
+.invite-perks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.invite-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.invite-perk-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.invite-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invite-phone-frame {
+  max-width: 270px;
+  background: #000000;
+  border: 8px solid #1F2937;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18), 0 0 25px rgba(177, 72, 13, 0.12);
+  transition: transform var(--transition);
+}
+
+.invite-phone-frame:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.invite-phone-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Responsive */
 @media (max-width: 860px) {
   .hero-grid {
@@ -876,6 +1209,32 @@ footer {
   }
   .steps-grid {
     grid-template-columns: 1fr;
+  }
+  .invite-card {
+    grid-template-columns: 1fr;
+    padding: 36px 24px;
+    gap: 36px;
+    text-align: center;
+  }
+  .invite-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .invite-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .invite-code-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .invite-perks {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .invite-phone-frame {
+    max-width: 220px;
+    margin: 0 auto;
   }
 }
 
@@ -939,5 +1298,24 @@ footer {
 
   .theme-toggle-bar {
     margin-bottom: 28px;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .business-card-wrapper {
+    padding: 28px 18px;
+  }
+
+  .business-cta-box {
+    padding: 24px 18px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .business-cta-content p {
+    margin-bottom: 16px;
   }
 }
