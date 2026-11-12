@@ -125,6 +125,22 @@ header.scrolled .header-container {
   flex-shrink: 0;
 }
 
+.brand-logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 2px 8px rgba(177, 72, 13, 0.16);
+  border: 1px solid rgba(177, 72, 13, 0.15);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.brand:hover .brand-logo-icon {
+  transform: scale(1.08);
+}
+
 .brand-icon {
   display: flex;
   align-items: center;
