@@ -3,6 +3,8 @@
    "We build products for the world"
    =================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
 :root {
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -603,6 +605,131 @@ button, input, textarea {
   color: var(--text-muted);
 }
 
+/* ===================================================================
+   Product Spotlight (Chukta)
+   =================================================================== */
+.product-spotlight-card {
+  background: linear-gradient(135deg, rgba(20, 27, 45, 0.95) 0%, rgba(10, 13, 20, 0.9) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(99, 102, 241, 0.15);
+}
+
+.product-spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316 0%, #6366f1 50%, #06b6d4 100%);
+}
+
+.spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fb923c;
+  margin-bottom: 1.25rem;
+}
+
+.spotlight-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f97316;
+  box-shadow: 0 0 8px #f97316;
+}
+
+.spotlight-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.chukta-brand-name {
+  font-family: 'Agbalumo', cursive, system-ui, sans-serif;
+  color: #fb923c;
+  font-weight: 400;
+}
+
+.spotlight-desc {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.spotlight-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
+}
+
+.spotlight-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.spotlight-feature-item svg {
+  width: 18px;
+  height: 18px;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.spotlight-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.spotlight-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotlight-phone-frame {
+  max-width: 250px;
+  background: #000000;
+  border: 7px solid #1F2937;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(249, 115, 22, 0.2);
+  transition: transform var(--transition-normal);
+}
+
+.spotlight-phone-frame:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.spotlight-phone-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Values Grid */
 .values-grid {
   display: grid;
@@ -778,8 +905,8 @@ button, input, textarea {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
   margin-bottom: 3.5rem;
 }
 
@@ -829,6 +956,14 @@ button, input, textarea {
 
 /* Responsive */
 @media (max-width: 900px) {
+  .product-spotlight-card {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.75rem;
+    gap: 2.5rem;
+  }
+  .spotlight-features {
+    grid-template-columns: 1fr;
+  }
   .highlight-box {
     grid-template-columns: 1fr;
   }
