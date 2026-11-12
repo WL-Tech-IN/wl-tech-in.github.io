@@ -34,9 +34,20 @@
 <body>
 
   <!-- Navigation Header -->
-  <header>
+  <header id="siteHeader">
     <div class="header-container">
       <a href="index.html" class="brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+            <path d="M9 16.5l4 4 10-10" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="brandGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#D95C14"/>
+                <stop offset="1" stop-color="#943706"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
         <span class="chukta-label">Chukta</span>
         <span class="brand-badge">App</span>
       </a>
@@ -46,10 +57,14 @@
         <a href="#screens" class="nav-link">Screens</a>
         <a href="#how-it-works" class="nav-link">How It Works</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#business-enquiry" class="nav-link">Business Enquiry</a>
+        <a href="#business-enquiry" class="nav-link">Business</a>
+        <a href="invite" class="nav-link nav-link-highlight">Invite</a>
         <div class="nav-divider"></div>
-        <a href="privacy-policy.html" class="nav-link nav-link-muted">Privacy Policy</a>
-        <a href="terms-and-conditions.html" class="nav-link nav-link-muted">Terms</a>
+        <div class="nav-drawer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span class="nav-drawer-dot">&bull;</span>
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+        </div>
         <div class="nav-drawer-cta">
           <a href="https://forms.gle/h9m8EJJYmEHEjvmy6" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
             Get Early Access &rarr;

@@ -69,6 +69,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Scroll Header Effect & Active Link ScrollSpy
+  const siteHeader = document.getElementById('siteHeader') || document.querySelector('header');
+  const scrollLinks = document.querySelectorAll('.nav-menu .nav-link[href^="#"]');
+  const observedSections = [];
+
+  scrollLinks.forEach(link => {
+    const id = link.getAttribute('href').substring(1);
+    const targetEl = document.getElementById(id);
+    if (targetEl) {
+      observedSections.push({ id, el: targetEl, link });
+    }
+  });
+
+  const handleScroll = () => {
+    // Header elevation & shrink on scroll
+    if (siteHeader) {
+      if (window.scrollY > 15) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    }
+
+    // ScrollSpy active highlighting
+    if (observedSections.length > 0) {
+      const scrollY = window.scrollY + 140;
+      let activeId = '';
+      for (let i = observedSections.length - 1; i >= 0; i--) {
+        if (scrollY >= observedSections[i].el.offsetTop) {
+          activeId = observedSections[i].id;
+          break;
+        }
+      }
+
+      observedSections.forEach(item => {
+        if (activeId && item.id === activeId) {
+          item.link.classList.add('active');
+        } else {
+          item.link.classList.remove('active');
+        }
+      });
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
   // FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
