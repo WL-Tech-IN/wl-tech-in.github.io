@@ -4,21 +4,68 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Toggle
+  // Mobile & Tablet Nav Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
+  const navBackdrop = document.getElementById('navBackdrop');
+
+  const closeNav = () => {
+    if (navMenu && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      if (mobileToggle) {
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+      if (navBackdrop) {
+        navBackdrop.classList.remove('open');
+      }
+    }
+  };
+
+  const openNav = () => {
+    if (navMenu) {
+      navMenu.classList.add('open');
+      if (mobileToggle) {
+        mobileToggle.classList.add('active');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+      }
+      if (navBackdrop) {
+        navBackdrop.classList.add('open');
+      }
+    }
+  };
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = navMenu.classList.toggle('open');
-      mobileToggle.setAttribute('aria-expanded', isOpen);
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.contains('open');
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
     });
 
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        mobileToggle.setAttribute('aria-expanded', 'false');
+        closeNav();
       });
+    });
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeNav);
+    }
+
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeNav();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeNav();
+      }
     });
   }
 
@@ -77,8 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Ensure legal links always resolve inside /chukta/
-  document.querySelectorAll('a[href="privacy-policy.html"], a[href="terms-and-conditions.html"]').forEach(link => {
+  // Ensure chukta internal links always resolve inside /chukta/
+  document.querySelectorAll('a[href="invite"], a[href="privacy-policy.html"], a[href="terms-and-conditions.html"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const target = link.getAttribute('href');
       const pathname = window.location.pathname;

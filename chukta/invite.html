@@ -38,16 +38,28 @@
         <a href="index.html" class="nav-link">About Chukta</a>
         <a href="index.html#features" class="nav-link">Features</a>
         <a href="index.html#screens" class="nav-link">Screenshots</a>
-        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+        <div class="nav-divider"></div>
+        <a href="privacy-policy.html" class="nav-link nav-link-muted">Privacy Policy</a>
+        <div class="nav-drawer-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.wltechin.chuktaapp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
+            Install App &rarr;
+          </a>
+        </div>
       </nav>
 
       <div class="nav-actions">
         <a href="https://play.google.com/store/apps/details?id=com.wltechin.chuktaapp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
           Install App
         </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
   </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <!-- Invitation Main Hero -->
   <main class="invite-main">
@@ -141,7 +153,7 @@
           <a href="index.html">Chukta Home</a>
           <a href="privacy-policy.html">Privacy Policy</a>
           <a href="terms-and-conditions.html">Terms & Conditions</a>
-          <a href="mailto:support@chukta.app">support@chukta.app</a>
+          <a href="mailto:wltechin.chukta@gmail.com">wltechin.chukta@gmail.com</a>
         </div>
       </div>
     </div>
@@ -205,6 +217,8 @@
       }
     })();
   </script>
+  <!-- Scripts -->
+  <script src="../assets/js/chukta.js"></script>
 </body>
 </html>
 

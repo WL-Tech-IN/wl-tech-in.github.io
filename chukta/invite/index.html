@@ -25,10 +25,10 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23B1480D'/><path d='M9 16l4 4 10-10' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 
   <script>
-    // Ensure trailing slash when accessed via local dev servers (e.g. /chukta/invite -> /chukta/invite/)
-    // so relative links like ../index.html resolve correctly
-    if (!window.location.pathname.endsWith('/') && !window.location.pathname.endsWith('.html')) {
-      window.location.replace(window.location.pathname + '/' + window.location.search + window.location.hash);
+    // Clean URL normalizer: ensure URL stays clean as /chukta/invite
+    if (window.location.pathname.endsWith('/chukta/invite/') || window.location.pathname.endsWith('/chukta/invite/index.html')) {
+      const cleanPath = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '');
+      window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
     }
   </script>
 </head>
@@ -46,16 +46,28 @@
         <a href="../index.html" class="nav-link">About Chukta</a>
         <a href="../index.html#features" class="nav-link">Features</a>
         <a href="../index.html#screens" class="nav-link">Screenshots</a>
-        <a href="../privacy-policy.html" class="nav-link">Privacy Policy</a>
+        <div class="nav-divider"></div>
+        <a href="../privacy-policy.html" class="nav-link nav-link-muted">Privacy Policy</a>
+        <div class="nav-drawer-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.wltechin.chuktaapp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
+            Install App &rarr;
+          </a>
+        </div>
       </nav>
 
       <div class="nav-actions">
         <a href="https://play.google.com/store/apps/details?id=com.wltechin.chuktaapp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-pill">
           Install App
         </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
   </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <!-- Invitation Main Hero -->
   <main class="invite-main">
@@ -149,7 +161,7 @@
           <a href="../index.html">Chukta Home</a>
           <a href="../privacy-policy.html">Privacy Policy</a>
           <a href="../terms-and-conditions.html">Terms & Conditions</a>
-          <a href="mailto:support@chukta.app">support@chukta.app</a>
+          <a href="mailto:wltechin.chukta@gmail.com">wltechin.chukta@gmail.com</a>
         </div>
       </div>
     </div>
@@ -214,6 +226,8 @@
       }
     })();
   </script>
+  <!-- Scripts -->
+  <script src="../../assets/js/chukta.js"></script>
 </body>
 </html>
 
